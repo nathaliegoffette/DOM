@@ -9,41 +9,49 @@ for (var i=0; i<students.length;i++){
     let newContent = document.createTextNode(students[i]);
 
     newPara.appendChild(newContent);
-    
+
     newSection.appendChild(newPara);
 
     let article = document.querySelector('article');
 
     article.append(newSection);
-
-
     
 }
+       
 
 let z = document.querySelectorAll('section');
 
+    let r;
+    let g;
+    let b;
+
 for (elem of z){
     function ranColor(){
-            let r=Math.floor(Math.random() * (255 + 1));
-            let g=Math.floor(Math.random() * (255 + 1));
-            let b=Math.floor(Math.random() * (255 + 1));
+        r=Math.floor(Math.random() * (255 + 1));
+        g=Math.floor(Math.random() * (255 + 1));
+        b=Math.floor(Math.random() * (255 + 1));
+            
             return "rgb("+r+","+g+","+b+")";
         }
+
         elem.style.backgroundColor = ranColor();
+        
+                    
+            let Bright = Math.sqrt((r * r * 0.241) + (g * g * 0.691) + (b * b * 0.068));
+       
+               if (Bright < 130){
+                   elem.style.color = '#FFFFFF';
+    
+        }
     }
 
-/*for (var i=0; i<students.length;i++){   
-    let newSection = document.createElement('section');
-    let newP = document.createElement('p');
-    let newContent = document.createTextNode(students[i]);
+  
 
-    newSection.appendChild(newContent);
+   
 
-    let article = document.querySelector('article');
-
-    article.append(newSection);
-
-
-    
-}
-*/
+  /*let Bright = Math.sqrt((r * r * 0.241) + (g * g * 0.691) + (b * b * 0.068));
+   
+           if (Bright < 130){
+               elem.style.color = #000000;
+           }
+   */
