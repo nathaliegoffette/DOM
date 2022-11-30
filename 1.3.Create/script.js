@@ -5,6 +5,36 @@ let students = ["Arno Volts" ,"Aurélien Mariaule" ,"Aurore Lemaire" ,"Benjamin 
 
 for (var i=0; i<students.length;i++){   
     let newSection = document.createElement('section');
+    let newPara = document.createElement('p');
+    let newContent = document.createTextNode(students[i]);
+
+    newPara.appendChild(newContent);
+    
+    newSection.appendChild(newPara);
+
+    let article = document.querySelector('article');
+
+    article.append(newSection);
+
+
+    
+}
+
+let z = document.querySelectorAll('section');
+
+for (elem of z){
+    function ranColor(){
+            let r=Math.floor(Math.random() * (255 + 1));
+            let g=Math.floor(Math.random() * (255 + 1));
+            let b=Math.floor(Math.random() * (255 + 1));
+            return "rgb("+r+","+g+","+b+")";
+        }
+        elem.style.backgroundColor = ranColor();
+    }
+
+/*for (var i=0; i<students.length;i++){   
+    let newSection = document.createElement('section');
+    let newP = document.createElement('p');
     let newContent = document.createTextNode(students[i]);
 
     newSection.appendChild(newContent);
@@ -13,10 +43,7 @@ for (var i=0; i<students.length;i++){
 
     article.append(newSection);
 
+
     
 }
-
-
-/*
-document.createElement (students [i]);
-section.innerHTML = students*/
+*/
