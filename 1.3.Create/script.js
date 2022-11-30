@@ -45,13 +45,22 @@ for (elem of z){
         }
     }
 
-  
+    var article = document.querySelector('article');
+    for (var i = article.children.length; i >= 0; i--) {
+        article.appendChild(article.children[Math.random() * i | 0]);
 
-   
+    
+    }
 
-  /*let Bright = Math.sqrt((r * r * 0.241) + (g * g * 0.691) + (b * b * 0.068));
+
+/*let n = Math.floor(Math.random() * 23);
+
+function shufStudents(students,n) {
+    
+        const shuffled = [...students].sort(() => 0.5 - Math.random ());
+    
+        return shuffled.slice(1, n);
+    }
    
-           if (Bright < 130){
-               elem.style.color = #000000;
-           }
-   */
+*/
+ 
