@@ -123,11 +123,11 @@ collection.forEach(function(singleSongObjects) {
       <img src="${singleSongObjects.picture}">
       </div>
       <div>
-      <h3>Title: ${singleSongObjects.title}</h3>
-      <p>Singer: ${singleSongObjects.singer}</p>
-      <p>Style: ${singleSongObjects.style}</p>
-      <p>Label: ${singleSongObjects.label}</p>
-      <p>Year of release: ${singleSongObjects.releaseYear}</p>
+      <h3> ${singleSongObjects.title}</h3>
+      <p class="singer"> ${singleSongObjects.singer}</p>
+      <p class="style"> ${singleSongObjects.style}</p>
+      <p class="label"> ${singleSongObjects.label}</p>
+      <p class="releaseYear"> ${singleSongObjects.releaseYear}</p>
       </div>
     </article>
   `;
