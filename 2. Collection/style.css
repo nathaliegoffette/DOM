@@ -100,7 +100,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   max-width: 80%;
-  width: 25rem;
+  width: 20rem;
+  /*width: 50vw;*/
   border-radius: 20px;
   align-items: center;
 }
@@ -108,7 +109,9 @@ img {
 .notes {
   display: flex;
   flex-direction: row;
-  align-items: space-around;
+  align-items: center;
+  width: 40%;
+  justify-content: space-between;
 }
 
 .all-songs-cards {
@@ -132,6 +135,9 @@ img {
     padding: 0.5rem;
     background-color: #D98014;
   }
+  /*article{
+          max-width: 40vw;
+  }*/
 }
 @media screen and (width > 1024px) {
   .all-songs-cards {
@@ -143,16 +149,4 @@ img {
     padding: 0.5rem;
     background-color: #D9501E;
   }
-}
-/*
-@media screen and (max-width: 700px) {
-    .row, .navbar {   
-      flex-direction: column;
-    }
-  }
-
-article {
-    flex: 33.33%;
-    padding: 5px;
-  } 
-  *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

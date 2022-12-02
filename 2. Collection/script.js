@@ -142,7 +142,7 @@ collection.forEach(function(singleSongObjects) {
     htmlCode +
     `
     <article>
-      <div>
+      <div class="image">
       <img src="${singleSongObjects.picture}">
       </div>
       <div>
