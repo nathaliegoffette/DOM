@@ -10,16 +10,14 @@ body{
     margin:0;
     display:flex;
     flex-direction: column;
-    /*flex-wrap: wrap;*/
     background-color:rgb(52, 75, 90);
 
 }
 
 
-
 header{
     text-align: center;
-    background-color: rgb(24, 36, 51);
+    background-color: #323E40;
     color : white;
     font-size: 1.6rem;
     font-family:$font_Elite;
@@ -31,9 +29,9 @@ header{
 }
 
 article{
-    background-color: white;
+    background-color: rgb(252, 248, 248);
     display:flex;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap:wrap;
     gap : 0.5rem;
     flex-direction: column;
@@ -45,39 +43,49 @@ article{
 
 .label{
     font-size: 1rem;
-    display: block;
-    background-color: rgb(38, 94, 104);
+    display: flex;
+    background-color: #323E40;
     color : white;
-    max-width: 40%;
+    font-weight:bold;
     border-radius: 8px;
     text-align: center;
-    flex-grow :1;
-    flex-basis : 50%;
-    
+    margin : 1rem;
+    width : 20vw;
+    height: fit-content;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
 }
 
 .releaseYear{
     font-size: 1rem;
-    display:block;
-    background-color: rgb(233, 217, 70);
-    max-width: 40%;
+    display:flex;
+    background-color: #732002;
     border-radius: 8px;
+    color:white;
+    font-weight: bold;
     text-align: center;
     flex-grow :1;
     flex-basis : 50%;
+    margin:1rem;
+    width: 20vw;
+    height: fit-content;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
 }
 
 h3{
     font-family: $font_Quicksand;
     font-weight: bolder;
-    font-size : 1.2rem;
+    font-size : 1.4rem;
     padding-bottom: 0rem;
     margin-bottom:0rem;
 }
 
 .singer{
     font-family: $font_Quicksand;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 0rem;
 }
@@ -95,25 +103,30 @@ p{
 img {
     display:flex;
     align-items: center;
-    /*height: auto;*/
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     max-width: 80%;
     width: 25rem;
     border-radius: 20px;
+    align-items: center;
   }
+
+.notes{
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+}
 
 .all-songs-cards {
     display: flex;
-    /*flex-direction: row;*/
 }
 
 
 @media screen and(width < 480px) {
     .all-songs-cards {
     flex-direction: column;
-    background-color: green;   
+    background-color: #F2A922;   
     }
 
     
@@ -128,7 +141,7 @@ img {
      align-content:space-around;
      justify-content: center;
      padding:0.5rem;   
-     background-color:rgb(241, 212, 116);
+     background-color:#D98014;
 
      
     }
@@ -143,7 +156,7 @@ img {
         align-content:space-around;
         justify-content: center;
         padding:0.5rem;   
-        background-color: rgb(15, 42, 43);
+        background-color: #D9501E;
        }
 
        

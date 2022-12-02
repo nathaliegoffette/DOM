@@ -110,6 +110,28 @@ const collection = [
     },
 ]
 
+/*let body = getElementbyTagName ("body");
+let allSongCards = document.createElement("div");
+allSongCards.className='all-songs-cards';
+
+body.append('div');
+*/
+/*document.body.onload = addElement;
+
+function addElement() {
+  // create a new div element
+  const newDiv = document.createElement("div");
+  newDiv.className = "all-songs-cards";
+
+
+  // add the newly created element and its content into the DOM
+  const currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv);
+}
+
+*/
+
+
 
 let htmlCode = ``;
 
@@ -127,8 +149,10 @@ collection.forEach(function(singleSongObjects) {
       <h3> ${singleSongObjects.title}</h3>
       <p class="singer"> ${singleSongObjects.singer}</p>
       <p class="style"> ${singleSongObjects.style}</p>
+      <div class ="notes">
       <p class="label"> ${singleSongObjects.label}</p>
       <p class="releaseYear"> ${singleSongObjects.releaseYear}</p>
+      </div>
       </div>
     </article>
   `;
