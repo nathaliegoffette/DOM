@@ -173,7 +173,7 @@ function listElement(){
 
     section.appendChild(article);
     main.appendChild(section);
-    document.body.insertBefore(main,document.getElementsByTagName ("footer"[0]));
+    document.body.insertBefore(main,document.getElementsByTagName ("footer")[0])
 
   }
 }
