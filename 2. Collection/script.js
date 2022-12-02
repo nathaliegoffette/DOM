@@ -110,6 +110,7 @@ const collection = [
     },
 ]
 
+
 let htmlCode = ``;
 
 
@@ -137,29 +138,43 @@ const songCards = document.querySelector(".all-songs-cards");
 
 songCards.innerHTML = htmlCode;
 
-/*let body = document.querySelector('body');
+/*
+function listElement(){
+  let main = document.createElement ("main");
+  let section = document.createElement ("section");
 
-let container = document.createElement("div");
-    container.className = "container";
+  for(let element of collection){
+    let article= document.createElement("article");
+    article.className=element.name;
 
-body.append(container);
+    let title = document.createElement("h3");
+    title.innerText=element.title;
+    article.appendChild(title);
 
-for(let i=0; i<collection.length;i++){
-    const song = document.createElement("div")
-    song.className = "song"
+    let singer = document.createElement("h4");
+    singer.innerText=element.singer;
+    article.appendChild(singer);
 
-    const list = document.createElement("p")
+    let releaseYear = document.createElement("p");
+    releaseYear.innerText=element.releaseYear;
+    article.appendChild(releaseYear);
 
-    list.innerText = `${collection[i].title} ${collection[i].singer} ${collection[i].releaseYear} ${collection[i].style} ${collection[i].label} ${collection[i].picture}`
-    song.appendChild(list)
+    let style = document.createElement("p");
+    style.innerText=element.style;
+    article.appendChild(style);
 
-    let container = document.createElement("div");
-    container.className = "container"
-    
-    song.appendChild(list);
+    let label = document.createElement ("p");
+    label.innerText=element.label;
+    article.appendChild(label);
 
-    container.appendChild(song);
+    let picture = document.createElement("picture");
+    picture.setAttribute("picture", element.picture);
+    article.appendChild(picture);
 
-    
+    section.appendChild(article);
+    main.appendChild(section);
+    document.body.insertBefore(main,document.getElementsByTagName ("footer"[0]));
+
+  }
 }
-*/
+listElement(); */

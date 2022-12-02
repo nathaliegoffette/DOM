@@ -8,10 +8,10 @@ $font_Elite: 'Special Elite' , cursive;
 
 body{
     margin:0;
-    display:flex;
-    flex-direction: column;
+    display:block;
+    /*flex-direction: column;*/
     flex-wrap: wrap;
-    background-color:rgb(95, 93, 93);
+    background-color:rgb(52, 75, 90);
 
 }
 
@@ -19,7 +19,7 @@ header{
     text-align: center;
     background-color: rgb(24, 36, 51);
     color : white;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family:$font_Elite;
     font-weight: lighter;
     margin:0;
@@ -31,16 +31,16 @@ header{
 article{
     background-color: white;
     display:flex;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-wrap:wrap;
     gap : 0.5rem;
-    /*flex-direction: column;*/
+    flex-direction: column;
     padding: 1rem;
     margin:1rem;
     border-radius: 20px;
     
-
 }
+
 .label{
     font-size: 1rem;
     display: block;
@@ -51,6 +51,7 @@ article{
     text-align: center;
     flex-grow :1;
     flex-basis : 50%;
+    
 }
 
 .releaseYear{
@@ -66,21 +67,32 @@ article{
 
 h3{
     font-family: $font_Quicksand;
-    font-weight: bold;
+    font-weight: bolder;
     font-size : 2.3rem;
+    padding-bottom: 0rem;
+    margin-bottom:0rem;
 }
+
+.singer{
+    font-family: $font_Quicksand;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0rem;
+}
+
 
 p{
     font-family: $font_Quicksand;
     font-size: 1.6rem;
     display : flex;
+    margin-top:0rem;
+    margin-left:0.2rem;
     
 }
 
 img {
-    /*flex-grow:1;
-    flex-basis:100%;
-    /*max-width: 20em;*/
+    display:flex;
+    align-items: center;
     height: auto;
     text-align: center;
     margin-left: auto;
@@ -89,4 +101,53 @@ img {
     border-radius: 20px;
   }
 
+.allsongscards {
+    display: flex;
+    /*flex-direction: row;*/
+}
+
+
+@media screen and(width < 480px) {
+    .allsongscards {
+    flex-direction: column;
+
+    
+    }
+}
+
+@media screen and(480px < width < 1024px) {
+    .allsongscards { 
+     flex-direction: row;
+     flex-wrap: wrap;
+     flex : 33.33%;
+     padding:0.5rem;   
+     background-color:rgb(241, 212, 116);
+    }
+}
+
+
+@media screen and(width < 1024px) {
+    .allsongscards { 
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex : 25%;
+        padding:0.5rem;   
+        background-color: pink;   
+       }
+}
+
+
+
+
+/*
+@media screen and (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+  }
  
+article {
+    flex: 33.33%;
+    padding: 5px;
+  } 
+  */
