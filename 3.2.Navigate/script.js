@@ -19,12 +19,10 @@ const clickOnSquare = (e) => {
 
   const ul = document.querySelector('ul');
   const li = document.createElement("li");
-  li.innerHTML = getElapsedTime();
+  li.innerHTML = getElapsedTime() + (" Create a new " + e.target.classList[1] + " square.");
 
   ul.appendChild(li);
 
-
-  /*console.log(newDiv);*/
 }
 
 const actionSquares = document.querySelectorAll('.actionsquare')
@@ -32,8 +30,26 @@ for (let actionSquare of actionSquares) {
   actionSquare.addEventListener('click', clickOnSquare)
 }
 
-/*
-const green = document.getElementsByClassName("actionsquare green")
-const violet = document.getElementsByClassName("actionsquare violet")
-const orange = document.getElementsByClassName("actionsquare orange")
-.addEventListener('click', clickedSquare())*/
+function ranColor(){
+  r=Math.floor(Math.random() * (255 + 1));
+  g=Math.floor(Math.random() * (255 + 1));
+  b=Math.floor(Math.random() * (255 + 1));
+      
+      return "rgb("+r+","+g+","+b+")";
+  }
+
+const body = document.querySelector('body')
+
+body.addEventListener("keydown", (event) => {
+  if (event.isComposing || event.keyCode === 32) {
+    body.style.backgroundColor = ranColor();
+    
+    const ul = document.querySelector('ul');
+    const li = document.createElement("li");
+    li.innerHTML = ("The spacebar has been used") + ("- rgb("+r+","+g+","+b+")");
+
+    ul.appendChild(li);
+  }
+
+});
+
