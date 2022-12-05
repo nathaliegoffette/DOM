@@ -7,6 +7,24 @@ const getElapsedTime = () => {
 const clickOnSquare = (e) => {
   console.log(e.target.classList[1])
   console.log(getElapsedTime())
+
+  const newDiv = document.createElement("div");
+  newDiv.className = ("displayedsquare "+ e.target.classList[1]);
+
+  const displayedSquareWrapper = document.querySelector('.displayedsquare-wrapper');
+  /*console.log(displayedSquareWrapper);*/
+
+  displayedSquareWrapper.appendChild(newDiv);
+
+
+  const ul = document.querySelector('ul');
+  const li = document.createElement("li");
+  li.innerHTML = getElapsedTime();
+
+  ul.appendChild(li);
+
+
+  /*console.log(newDiv);*/
 }
 
 const actionSquares = document.querySelectorAll('.actionsquare')
@@ -14,23 +32,8 @@ for (let actionSquare of actionSquares) {
   actionSquare.addEventListener('click', clickOnSquare)
 }
 
-const displayedSquareWrapper = document.getElementsByClassName('displayedsquare-wrapper');
-
-  const newDiv = document.createElement("div");
-  newDiv.className = "displayedsquare";
-  displayedSquareWrapper.append(newDiv);
-
-
-
-/*function submit() {
-  var card = document.createElement("div");
-  card.innerHTML = "Hello";
-  
-  var h1 = document.createElement("h1");
-  h1.innerHTML = "Some h1 text";
-  
-  card.append(h1);
-  document.body.append(card); 
-}
-
-<button onclick="submit()">Submit</button>*/
+/*
+const green = document.getElementsByClassName("actionsquare green")
+const violet = document.getElementsByClassName("actionsquare violet")
+const orange = document.getElementsByClassName("actionsquare orange")
+.addEventListener('click', clickedSquare())*/
