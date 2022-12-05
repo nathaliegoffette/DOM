@@ -53,3 +53,18 @@ body.addEventListener("keydown", (event) => {
 
 });
 
+//non fonctionnel pour l'instant
+
+body.addEventListener("keydown", (event) => {
+  if (event.isComposing || event.keyCode === 73) {
+  }
+  const list = document.querySelectorAll('li');
+  while (list.length>0) {
+
+  list.remove();
+
+  /*else() {
+    console.log(done);
+  }*/
+}
+});
